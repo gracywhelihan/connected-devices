@@ -1,4 +1,4 @@
-##week 1 - class notes
+## week 1 - class notes
 - Packet switched vs. circuit switched 
 
 ls /dev/cu.* —>  see all incoming ports
