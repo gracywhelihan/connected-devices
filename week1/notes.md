@@ -15,7 +15,7 @@ nc IP 8080 —> send
 
 10.18.148.194 —> tom’s IP Address
 
--v
+-v for verbose
 
 Why can’t you listen on port 8080 with nc -l 8080 ?
 - Could be a fire wall 
