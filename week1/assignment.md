@@ -18,7 +18,7 @@ To get started on connecting environmental data from my Arduino to a webpage, I 
 <br/><br/>
 Those steps were easy as I have already sent sensor data to an MQTT topic in Understaning Networks and Device to Database (classes I took last fall and spring). So, connecting that data to an http client will be the difficult part. I know that I need to first have an http client for MQTT to connect to and would probably have to do that via sockets and using node.js. 
 <br/><br/>
-#Questions:
+# Questions:
 How do we set up our own MQTT Broker? Is it better to use a public broker like test.mosquitto.org or a private broker?
 
 <br/><br/>
