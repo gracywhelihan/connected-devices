@@ -24,9 +24,9 @@ In class we looked at a simple http client that was hosted on [glitch](https://t
 I know that in class Tom talked about us not copying the code, so although I was able to get it working there is still a lot I need to learn before I understand exactly how the server.js and script.js are working. But for now I think this is a good start. 
 <br/><br/>
 ## Questions:
-How do we set up our own MQTT Broker? Is it better to use a public broker like test.mosquitto.org or a private broker?
-Can I add a p5.js sketch to the website and use the sensor data there?
-Why do both the server.js and script.js files have to connect to the MQTT broker? The script.js file is for the front end and the server.js file is for the backend? But can they communicate with each other to get the data so there is only one connection to the broker?
+1. How do we set up our own MQTT Broker? Is it better to use a public broker like test.mosquitto.org or a private broker?
+2. Can I add a p5.js sketch to the website and use the sensor data there?
+3. Why do both the server.js and script.js files have to connect to the MQTT broker? The script.js file is for the front end and the server.js file is for the backend? But can they communicate with each other to get the data so there is only one connection to the broker?
 
 
 <br/><br/>
