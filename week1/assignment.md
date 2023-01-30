@@ -17,9 +17,17 @@ To get started on connecting environmental data from my Arduino to a webpage, I 
 
 <br/><br/>
 Those steps were easy as I have already sent sensor data to an MQTT topic in Understaning Networks and Device to Database (classes I took last fall and spring). So, connecting that data to an http client will be the difficult part. I know that I need to first have an http client for MQTT to connect to and would probably have to do that via sockets and using node.js. 
+
+In class we looked at a simple http client that was hosted on [glitch](https://tigoe-mqtt-client.glitch.me/). I thought a good way to start would be to remix this glitch project and see if I could figure out how to get my data to connect. I noticed there was a server.js file and a script.js file. I changed the broker to test.mosquitto.org and the topic to my topic - gwBroker/# in both of the js files. After a little bit of a wait, I was able to get it connected!
+<img width="1447" alt="Screen Shot 2023-01-30 at 11 21 49 AM" src="https://user-images.githubusercontent.com/76453899/215543958-a63486ee-8b94-4603-a738-d434123dc13e.png">
+<br/><br/>
+I know that in class Tom talked about us not copying the code, so although I was able to get it working there is still a lot I need to learn before I understand exactly how the server.js and script.js are working. But for now I think this is a good start. 
 <br/><br/>
 ## Questions:
 How do we set up our own MQTT Broker? Is it better to use a public broker like test.mosquitto.org or a private broker?
+Can I add a p5.js sketch to the website and use the sensor data there?
+Why do both the server.js and script.js files have to connect to the MQTT broker? The script.js file is for the front end and the server.js file is for the backend? But can they communicate with each other to get the data so there is only one connection to the broker?
+
 
 <br/><br/>
 
