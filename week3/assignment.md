@@ -8,4 +8,7 @@ Here is my [data dashboard](https://jasper-frost-hisser.glitch.me/index.html)
 <br></br>
 There is still a lot I need to do visually and style wise, but it is resposive so I am excited about that!
 I think the html and css just takes some gettin used to. I also am not loggin any data into a file at the moment. This will be something I need to get set up and then be able to fetch the data to make some better time laspes visualizations. I will also need to add time stamps to my Arduino code to get this part up and running. I think it might be nice to include a page for each sensor and then include more of the visuals there. 
-I noticed that the Arudino that was connected to the temperature sensor will disconnect from the network after like 20 minutes. I am not really sure why it is doing this?
+I noticed that the Arudino that was connected to the temperature sensor will disconnect from the network after like 20 minutes. I am not really sure why it is doing this? I definitely plan to make the dashboard more colorful and interesting because right now it is a bit dull. I think adding some p5.js sketches would be cool. 
+<br></br>
+ ## Questions:
+ Do the 
