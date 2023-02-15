@@ -11,4 +11,5 @@ I think the html and css just takes some gettin used to. I also am not loggin an
 I noticed that the Arudino that was connected to the temperature sensor will disconnect from the network after like 20 minutes. I am not really sure why it is doing this? I definitely plan to make the dashboard more colorful and interesting because right now it is a bit dull. I think adding some p5.js sketches would be cool. 
 <br></br>
  ## Questions:
- Do the 
+ Does the data being translated from the script.js to the html pages always have to be an id?
+ I am still a little bit confused on the difference between the server.js and script.js files and why they both need to be communicating with mqtt.
