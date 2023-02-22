@@ -23,3 +23,7 @@ serial.pintln(__TIME__)}
   - combine rtc with wifi get time --> tigoe.net clock club 
   - get the epoch time from the network --> rtc.setEpoch
   - redo a get time from network every 12 hours because the rtc on the arduino will "drift"
+
+QR Codes:
+- bit map file
+- 
