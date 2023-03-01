@@ -24,3 +24,7 @@ Example:
 
 WifiSSLClient --> 8883
 wifiClient --> 1883
+
+
+Run the data log on a private server - like the one we made in understanding networks
+- [mqttNodeClientFileWriter](https://github.com/tigoe/mqtt-examples/tree/main/node-clients/MqttNodeClientFileWriter/)
