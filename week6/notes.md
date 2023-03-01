@@ -21,3 +21,6 @@ Example:
 [websockets](https://glitch.com/edit/#!/tigoe-websocket-server?path=server.js%3A1%3A0)
 
 - websocket > socket.io
+
+WifiSSLClient --> 8883
+wifiClient --> 1883
