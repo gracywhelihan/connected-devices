@@ -22,10 +22,7 @@ function draw() {
   
  
   gracyHouse.showG();
-  push();
-  //translate(0, canvaswidth/4);
   priyankaHouse.showP();
-  pop();
 }
 
 function windowResized() {
@@ -100,9 +97,10 @@ class GracyHouse {
   }
 }
 
-class PriyankaHouse  extends GracyHouse{
+class PriyankaHouse{
   constructor(x, y) {
-    super();
+    this.x = x;
+    this.y = y;
   }
   showP() {
     if(r == "no data" || g == "no data" || b == "no data"){
@@ -150,5 +148,9 @@ class PriyankaHouse  extends GracyHouse{
     endShape();
     fill("pink");
     circle(this.x * 1.375, this.y * 0.97, this.x * 0.08);
+  }
+   update(x, y) {
+    this.x = x;
+    this.y = y;
   }
 }
