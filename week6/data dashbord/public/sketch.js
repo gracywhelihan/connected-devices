@@ -21,10 +21,10 @@ function draw() {
   
   
  
-  gracyHouse.show();
+  gracyHouse.showG();
   push();
   //translate(0, canvaswidth/4);
-  priyankaHouse.show();
+  priyankaHouse.showP();
   pop();
 }
 
@@ -55,7 +55,7 @@ class GracyHouse {
     this.x = x;
     this.y = y;
   }
-  show() {
+  showG() {
     let from = color(3, 252, 252);
     let to = color(250, 5, 5);
     
@@ -100,12 +100,11 @@ class GracyHouse {
   }
 }
 
-class PriyankaHouse {
+class PriyankaHouse  extends GracyHouse{
   constructor(x, y) {
-    this.x = x;
-    this.y = y;
+    super();
   }
-  show() {
+  showP() {
     if(r == "no data" || g == "no data" || b == "no data"){
       let c = color(252, 195, 61);
       fill(c);
@@ -151,9 +150,5 @@ class PriyankaHouse {
     endShape();
     fill("pink");
     circle(this.x * 1.375, this.y * 0.97, this.x * 0.08);
-  }
-  update(x, y) {
-    this.x = x;
-    this.y = y;
   }
 }
