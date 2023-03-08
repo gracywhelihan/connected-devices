@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head style = "background-color: yellow">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"
+      integrity="sha512-tc5xpAPaQDl/Uxd7ZVbV66v94Lys0IefMJSdlABPuzyCv0IXmr9TkqEQvZiWKRoXMSlP5YPRwpq2a+v5q2uzMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Amor</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <div style="text-align: CENTER; background-color: rgb(199, 239, 255);; margin-bottom: 20px; margin-top: 20px; font-family: cursive; font-size: 120%; font-weight: bold">
+      <h1>Priyanka & Gracy's Casa Amor</h1>
+    </div>
+  </head>
+
+  <body>
+    <p id="local"></p>
+
+    <div class="row" , class="col-container">
+      <div class="column" style="background-color: white; border-radius: 5px">
+        <div class="inner-column2" style="text-align: right">
+          <h2>Temperature</h2>
+        <div class="inner-column1">
+          <p id="tempF"></p>
+        </div>
+        <div class="inner-column1">
+          <p id="tempC"></p>
+          <!--           <p id="sound"></p> -->
+        </div>
+        </div>
+        <div class="inner-column2">
+        <h2>&</h2>
+        </div>
+        <div class="inner-column2" style="text-align: left; margin-top: 5px">
+        <h2>Humidity</h2>
+        <p id="hum"></p>
+        </div>
+      </div>
+      <div class="column" style="background-color: white; border-radius: 30px;">
+        <h2>Light Color</h2>
+        <div class="inner-column2">
+          <h3>Red:</h3>
+          <p id="r"></p>
+        </div>
+        <div class="inner-column2">
+          <h3>Green:</h3>
+          <p id="g"></p>
+        </div>
+        <div class="inner-column2">
+          <h3>Blue:</h3>
+          <p id="b"></p>
+        </div>
+      </div>
+      <div class="column" style="background-color: white; border-radius: 80px;">
+        <h2>Sound Level</h2>
+        <p id="sound"></p>
+      </div>
+       <div class="column-intro">
+       <p>
+      Priyanka and Gracy created two small houses each called "Casa Amor" to collect data in each person's enviornment. Priyanka is using a Light Color sensor to collect rgb color values of the light in her apartement. Gracy is using a sound sensor and a temperature and humidity sensor to collect data in her apartment. The data is being sent through a MQTT broker and are displayed in real time below.
+    </p> 
+            Click
+    <a
+      href="https://github.com/tigoe/mqtt-examples/tree/main/browser-clients/mqttjs/MqttJsClientSimple"
+      target="_blank"
+      >here</a
+    >
+    for source code by Tom Igoe
+    </div>
+
+      <!--       <div class="column" style="background-color: #ccc"> -->
+      <!--          //<script src="sketch.js"></script> -->
+      <div class="column" style="margin-left: 1px; border-style: none">
+        <script src="sketch.js"></script>
+      </div>
+    </div>
+    
+  </body>
+</html>
