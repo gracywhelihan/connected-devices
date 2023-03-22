@@ -12,4 +12,9 @@
 - what went well
 - what didn't
 - what you learned
-- 
+
+## HTTP
+- resquest and response 
+- maintain connection but opening a socket
+
+<img width="1133" alt="Screen Shot 2023-03-22 at 11 07 59 AM" src="https://user-images.githubusercontent.com/76453899/226948561-ce6f15db-a313-4056-93a1-71f8e3896851.png">
