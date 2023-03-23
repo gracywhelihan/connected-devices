@@ -1,9 +1,25 @@
 ## Data Dashboard Update
 
+I was no super suprised when I saw my data from spring break. I knew that my arduino was disconnecting from the broker after about a day when I was testing it, but I didn;t want to bring it home with me to Colorado. So when I saw it was off the whole time I was there I was not surprised. I would like to try to add a reset mechanism like we talked about in class. So, I will defintely look into that. From the data that was collected I did see kind of an interesting patter that I assume is from my heater turning on and off (blue = sound, yellow = temp, red = humidity):
+
+<img width="481" alt="Screen Shot 2023-03-22 at 2 09 13 PM" src="https://user-images.githubusercontent.com/76453899/227243729-26a1240c-030c-435e-8423-645d1f8427b9.png">
+
+Here is a close up:
+
+<img width="478" alt="Screen Shot 2023-03-22 at 2 09 26 PM" src="https://user-images.githubusercontent.com/76453899/227243891-2452a22d-3505-4832-8dd7-34cd5969a52d.png">
+
+This was during that little snow storm we had so it make sense that the heater was on (although it is on all the time because I dont have control over it) and that the temperature would rise as it's on and fall until it turned back on again. Also, it looks like the mic was picking up more sound when the heater was on, which also makes sense because it is super loud. 
+
+Then looking at the data from when I reset the arduino when I go home, it is quite different. It was also a lot warmer outsite so the heater wan't on and the temperature and sound are a lot more flat.
+
+<img width="477" alt="Screen Shot 2023-03-22 at 2 11 09 PM" src="https://user-images.githubusercontent.com/76453899/227245241-074990f3-9922-416e-a05f-2fb0dcdccd3c.png">
+
+
 
 ## Reading
 
 [The Slow Death of Surveillance Capitalism Has Begun](https://www.wired.com/story/meta-surveillance-capitalism/)
+
 [A Skeptical Take on the A.I. Revolution](https://www.nytimes.com/2023/01/06/opinion/ezra-klein-podcast-gary-marcus.html)
 
 My take away from both readings is that there are going to be regulations that limit the way tech companies can collect data, which is good. That means that connected devices will also have regulations on what information they can collect and where they can send it. I think this also means that connected device need to be simple and secure. What I mean by this is, they should only be doing what they are made to do, and the company making it should be very transparent about it's funcitonality. Also, I think security is an obvious one, but the device should be secure. 
