@@ -41,3 +41,6 @@ I thought maybe I was not on the right network so I tried connecting on both the
 
 ![IMG_4018](https://user-images.githubusercontent.com/76453899/227785757-20b17616-dfef-48c9-b7fa-312cdcc33465.PNG)
 
+
+UPDATE:
+I asked Adnan how he connected to the stip because I know he is in Light, and he told me I had to download the source code and request a username while running the code locally. And it was successful!!
