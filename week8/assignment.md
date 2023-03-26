@@ -32,4 +32,12 @@ The past few months I feel like so many people have been freaking out about A.I.
 
 Also, to bring data back into the conversation, don't the A.I. companies also need to collect data from their users to they can improve their model?
 
+## Phillips Hue Control
+
+I had no luck creating a user name to control the light strip on pillar 12. I tried to create one using the [javascript client example](https://tigoe.github.io/hue-control/client-example-js/) but I kept getting the error that it failed to fetch. I followed the directions and pressed the button on the hub bridge and then clicked create user.
+<img width="651" alt="Screen Shot 2023-03-26 at 11 09 08 AM" src="https://user-images.githubusercontent.com/76453899/227785635-37342c51-1154-4a43-9f6f-018a969680b6.png">
+
+I thought maybe I was not on the right network so I tried connecting on both the nyu network and sandbox370, but still no luck. Then I tried to see if I could connect to the bridge through the app. But it said it could not find any brides:
+
+![IMG_4018](https://user-images.githubusercontent.com/76453899/227785757-20b17616-dfef-48c9-b7fa-312cdcc33465.PNG)
 
