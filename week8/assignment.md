@@ -44,3 +44,5 @@ I thought maybe I was not on the right network so I tried connecting on both the
 
 UPDATE:
 I asked Adnan how he connected to the stip because I know he is in Light, and he told me I had to download the source code and request a username while running the code locally. And it was successful!!
+
+I tested the Arduino switch code that turns the light on and off and it was successful. 
