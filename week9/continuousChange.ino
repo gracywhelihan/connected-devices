@@ -14,7 +14,7 @@
   #define SECRET_SSID "ssid"    
   #define SECRET_PASS "password"
    modified 1 Mar 2022
-   by Tom Igoe (tigoe) from HueBlink example
+   by Tom Igoe (tigoe)
 */
 
 #include <SPI.h>
