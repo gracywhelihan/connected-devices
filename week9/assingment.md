@@ -15,3 +15,6 @@ I didn't have a whole lot of time to test wether it would trigger when it is aro
 I also wanted to implement a single clap to dim and brighten the lights when the light is on. If I have time I think I can do this it would also just require some logic in the code that at the time of me writing the blog post I do not have the brain power to do. But maybe I will have it figure it out before class. Oh, and I would have liked to make an encosure for it but I ran out of time. 
 
 
+## Feedback
+
+To account for a long loud sound not counting a as two claps, you can also look for a valley or an "off" time between the two claps.
