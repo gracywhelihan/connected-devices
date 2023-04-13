@@ -7,9 +7,14 @@ My roomate did ask me last week if we could put a wind sensor on the roof and ha
 Bill of Materials:
 
 Adruino
+
 breadboard/wires
+
 Stepper motor & motor driver
+
 I am not sure what the enclosure will be yet. 
+
+https://github.com/tigoe/MakingThingsTalk2/tree/main/3rd_edition/chapter4/AQIWebClient
 
 
 
