@@ -16,5 +16,7 @@ I am not sure what the enclosure will be yet.
 
 https://github.com/tigoe/MakingThingsTalk2/tree/main/3rd_edition/chapter4/AQIWebClient
 
+https://github.com/tigoe/MakingThingsTalk2/blob/main/3rd_edition/chapter4/AQIWebClient002/AQIWebClient002.ino
+
 
 
