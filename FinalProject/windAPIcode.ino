@@ -13,20 +13,26 @@
 #include <WiFiNINA.h>  // use this for MKR WiFi 1010 and Nano 33 IoT
 #include <ArduinoHttpClient.h>
 #include "secrets.h"
+#include <Stepper.h>
 
-#include "Stepper.h"
+// define number of steps on motor (nema 17)
+#define STEPS 200
 
 // declare I/O pin numbers and global variables:
 const int port = 443;                 // HTTPS standard port
 const int networkLED = LED_BUILTIN;   // indicates network connection
-const int connectedLED = 4;           // indicates connection to server
-const int stepsPerRevolution = 512;  
-int speed = 0;
-const long requestInterval = 120000;  // delay between updates to the server
+const int connectedLED = 8; 
+const int requestLED =  9;          // indicates connection to server
+// initiate motor speed and pins
+Stepper stepper(STEPS, 4, 5, 6, 7);
+int motorSpeed = 0;
+const int stepsPerRevolution = 1000;
+const long requestInterval = 120000;
 
-
-// initialize the stepper library on pins 8 through 11:
-Stepper myStepper(stepsPerRevolution, 8,9,10,11);   
+//const long requestInterval = 120000;  // delay between updates to the server
+int buttonState = 0;
+int lastButtonState = 0; 
+int buttonPin = 2;
 
 
 // use WiFiSSLClient for https:
@@ -39,8 +45,11 @@ void setup() {
   Serial.begin(9600);             // initialize serial communication
   pinMode(networkLED, OUTPUT);    // set network LED pin as output
   pinMode(connectedLED, OUTPUT);  // set connected LED pin
-  // set the speed at 60 rpm:
-  myStepper.setSpeed(0);
+  pinMode(requestLED, OUTPUT); // set requested LED pin
+  pinMode(buttonPin, INPUT); // set button pin
+
+ //set motor speed to motor speed to start
+ stepper.setSpeed(motorSpeed);
 
   // while you're not connected to a WiFi AP,
   while (WiFi.status() != WL_CONNECTED) {
@@ -60,19 +69,37 @@ void setup() {
   route += "&apikey=";
   route += SECRET_API_KEY;
   // first connection:
-  connectToServer();
+  //connectToServer();
+
+  digitalWrite(requestLED, LOW);
 }
 
 void loop() {
   // make an HTTP request once every two minutes:
   if (millis() - lastRequestTime > requestInterval) {
-    connectToServer();
+    digitalWrite(requestLED, HIGH);
   }
+
+  // read the state of the pushbutton value:
+  buttonState = digitalRead(buttonPin);
+
+  if(buttonState != lastButtonState){
+
+    if(buttonState == HIGH ){
+      connectToServer();
+       // update the status LEDs:
+      motorSpeed = 10;
+      stepper.setSpeed(motorSpeed);
+      stepper.step(stepsPerRevolution);
+      Serial.println("windy!");
+
+      digitalWrite(requestLED, LOW);
+   }
+  }
+ // }
   // update the status LEDs:
   setLeds();
-
-  myStepper.step(stepsPerRevolution);
-  delay(200);
+  lastButtonState = buttonState;
 }
 
 void connectToServer() {
@@ -89,16 +116,16 @@ void connectToServer() {
   while (http.connected()) {
     setLeds();                                       // update status LEDs
     if (http.available()) {    
-      //Serial.println(http.readString());                      // if there's a response from the server,
+      // Serial.println(http.readString());                      // if there's a response from the server,
       bool lookfor = http.findUntil("windSpeed", "\n");  // parse response for "windSpeed"
       if (lookfor) {                                 // if there's a windSpeed value,
         wind = http.parseFloat();                       // read windSpeed value from the response
         http.flush();                                // throw out the rest of the response
         if (wind > -1) {                              // If you got an wind value,
           Serial.print("windSpeed: ");                   // print it out, and
-          Serial.println(wind);
-          // set steppper motor speed;
-          myStepper.setSpeed(wind);
+          // set motor speed to wind
+          motorSpeed = map(wind, 0, 100, 0, 200);  
+          Serial.println(wind);        
         }
       }
       http.stop();  // close the request
