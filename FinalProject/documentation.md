@@ -33,7 +33,8 @@ So I decided to map the wind speed from 0 to 100 to 0 to 200 (so double it) just
 
 I am super excited that I was able to get all of it working, but sometimes it can get a little scary (as in I think it's all broken) because the http request takes such a long time.
 
-<iframe src="https://player.vimeo.com/video/823234399?h=aa0cc9c29e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="IMG_4221"></iframe>
+
+https://vimeo.com/823234399?share=copy
 
 
 Overall I am pretty happy with the wind device, but I think this really is a 1st itereation - I need to rebuild to add in the LEDs and make sure the speed makes sense. And maybe using a DC motor would make more sense becasue it has a smoother rotation ¯\_(ツ)_/¯ 
